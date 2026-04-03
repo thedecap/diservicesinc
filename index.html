@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DIS</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://diservicesinc.com/web/images/favicon.ico" type="image/x-icon">
+
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://diservicesinc.com/web/css/stylenew.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@100;200;300;400;500;600&family=Play:wght@400;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://diservicesinc.com/web/css/owl.carousel.min.css">
+	<script src="https://diservicesinc.com/web/js/jquery.min.js"></script>
+
+	<script src="https://diservicesinc.com/web/js/owl.carousel.min.js"></script>
+
+
+<style>
+/* ── Reset & Base ── */
+html{scroll-behavior:smooth}
+*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{background:#fff !important;overflow-x:hidden}
+
+/* ── Nav ── */
+body main div.headercls{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:9000!important;background:rgba(255,255,255,.88)!important;backdrop-filter:blur(20px) saturate(180%)!important;-webkit-backdrop-filter:blur(20px) saturate(180%)!important;border-bottom:none!important;box-shadow:0 0 0 1px rgba(0,0,0,.04)!important;transition:all .35s ease!important;padding:0!important}
+body main div.headercls.scrolled{background:rgba(255,255,255,.96)!important;box-shadow:0 0 0 1px rgba(0,0,0,.04),0 2px 12px rgba(0,0,0,.04)!important}
+body>main{padding-top:72px!important}
+body main .headercls .navbar{padding:8px 0!important;min-height:56px!important}
+body main .headercls .navbar .container-fluid{max-width:1200px!important;margin:0 auto!important}
+body main .headercls #mainlogo{gap:8px!important}
+body main .headercls #mainlogo img.logo1{height:30px!important;transition:opacity .2s!important}
+body main .headercls #mainlogo img.logo2{height:24px!important;transition:opacity .2s!important}
+body main .headercls #mainlogo span{height:32px!important;background:rgba(52,130,173,.25)!important}
+body main .homenav .nav{gap:2px!important}
+body main .homenav .nav .nav-item .nav-link{font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:500!important;font-size:13px!important;color:#424245!important;padding:6px 12px!important;border-radius:6px!important;transition:color .15s,background .15s!important;white-space:nowrap!important}
+body main .homenav .nav .nav-item .nav-link:hover{color:#1d1d1f!important;background:rgba(0,0,0,.04)!important}
+body main .headercls .navbar-toggler{border:none!important;padding:4px 8px!important;box-shadow:none!important}
+body main .headercls .navbar-toggler:focus{box-shadow:none!important}
+
+/* ── Hero ── */
+.bannerslider{position:relative!important;margin-bottom:0!important;min-height:90vh!important;overflow:hidden!important;display:flex!important;align-items:center!important}
+.bannerslider video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;filter:brightness(.42)!important}
+.bannerslider::after{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(to bottom,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 100%)!important;pointer-events:none!important;z-index:1!important}
+.captionheader{position:relative!important;z-index:3!important;padding:0!important}
+.captionheader .container{padding-top:0!important}
+.captionheader h1{font-family:'Plus Jakarta Sans',sans-serif!important;font-size:clamp(2.4rem,5.2vw,4.2rem)!important;font-weight:700!important;line-height:1.08!important;letter-spacing:-.03em!important;color:#fff!important;max-width:700px!important}
+.captionheader h1 span{font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important;letter-spacing:inherit!important;color:#7ec8f0!important;-webkit-text-fill-color:#7ec8f0!important;background:none!important}
+.aidevelopment{position:relative!important;z-index:3!important;margin-top:36px!important;background:rgba(255,255,255,.08)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:16px!important;padding:22px 28px!important;max-width:680px!important}
+.aidevelopment h3{font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:600!important;font-size:1rem!important;color:#fff!important;margin-bottom:4px!important}
+.aidevelopment p{font-family:'Plus Jakarta Sans',sans-serif!important;color:rgba(255,255,255,.6)!important;font-size:.85rem!important;margin:0!important}
+
+/* ── Build Faster ── */
+.buildfaster{padding:100px 0 80px!important;background:#f5f5f7!important}
+.buildfaster .container{max-width:1080px!important}
+.videofaster{border-radius:20px!important;overflow:hidden!important;box-shadow:0 2px 8px rgba(0,0,0,.04),0 12px 48px rgba(0,0,0,.06)!important;position:relative!important}
+.videofaster video{display:block!important}
+.homevideofaster{background:linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 40%,transparent 65%)!important;padding:40px 36px 32px!important}
+.homevideofaster h3{font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:700!important;font-size:clamp(1.4rem,2.8vw,2.2rem)!important;letter-spacing:-.025em!important;color:#fff!important;text-transform:none!important;line-height:1.15!important;max-width:500px!important}
+.overlayimg{border-radius:10px!important;box-shadow:0 4px 16px rgba(0,0,0,.15)!important}
+
+/* ── We Believe ── */
+.context{overflow:visible!important}
+.ethicdiv{gap:56px!important;padding:0 20px!important;align-items:flex-start!important;position:relative!important;z-index:5!important}
+.area{background:#0b1d30!important;min-height:72vh!important}
+.ethichead h4{font-family:'Plus Jakarta Sans',sans-serif!important;font-size:clamp(2rem,3.8vw,3rem)!important;font-weight:700!important;letter-spacing:-.03em!important;line-height:1.08!important;text-align:left!important;color:#fff!important}
+.ethichead h4 span{color:#7ec8f0!important}
+.ethicp p{font-family:'Plus Jakarta Sans',sans-serif!important;font-size:clamp(.92rem,1.5vw,1.05rem)!important;line-height:1.8!important;color:rgba(255,255,255,.6)!important;padding-right:0!important}
+a.btn.btn-primary.mbtn,.mbtn{background:#0071e3!important;border:none!important;border-radius:980px!important;padding:14px 30px!important;font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:600!important;font-size:15px!important;color:#fff!important;box-shadow:none!important;transition:background .2s!important;text-decoration:none!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;line-height:1.2!important;position:relative!important;z-index:10!important;cursor:pointer!important}
+a.btn.btn-primary.mbtn:hover,.mbtn:hover{background:#0077ed!important;transform:none!important;box-shadow:none!important}
+.circles li{background:rgba(255,255,255,.035)!important;border-radius:50%!important;border:none!important}
+
+/* ── We Make ── */
+section:has(#wemake){padding:100px 0 80px!important;background:#fff!important}
+section:has(#wemake) .container{max-width:1080px!important}
+#wemake{margin-bottom:48px!important}
+#wemake h4.wemake{font-family:'Plus Jakarta Sans',sans-serif!important;font-size:clamp(1.8rem,3.2vw,2.5rem)!important;font-weight:700!important;letter-spacing:-.03em!important;color:#1d1d1f!important;margin-bottom:8px!important}
+#wemake p{font-family:'Plus Jakarta Sans',sans-serif!important;color:#86868b!important;font-size:1rem!important}
+.maincontainer{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.maincontainer figure{margin:0!important;border-radius:14px!important;overflow:hidden!important;background:#fff!important;border:1px solid #e8e8ed!important;box-shadow:none!important;transition:border-color .25s,box-shadow .35s ease,transform .35s ease!important;display:flex!important;flex-direction:column!important;cursor:pointer!important}
+.maincontainer figure:hover{transform:translateY(-3px)!important;border-color:#d2d2d7!important;box-shadow:0 4px 12px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.05)!important}
+.maincontainer .imgseccont{height:200px!important;overflow:hidden!important}
+.maincontainer .imgseccont img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .6s cubic-bezier(.25,.1,.25,1)!important}
+.maincontainer figure:hover .imgseccont img{transform:scale(1.03)!important}
+.maincontainer figcaption{padding:22px 24px 24px!important;flex:1!important;display:flex!important;flex-direction:column!important}
+.maincontainer figcaption a.cases{text-decoration:none!important;font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:500!important;color:#0071e3!important;font-size:.82rem!important;display:flex!important;flex-direction:column!important;flex:1!important}
+.maincontainer figcaption a.cases:hover{color:#0077ed!important}
+.maincontainer figcaption .cases p{font-family:'Plus Jakarta Sans',sans-serif!important;color:#1d1d1f!important;font-size:.87rem!important;line-height:1.5!important;margin-bottom:14px!important;flex:1!important;font-weight:400!important}
+
+/* ── Facts ── */
+body main section.disfact{background:#0b1d30!important;padding:96px 0!important;overflow:hidden!important;text-align:center!important}
+body main section.disfact::before,body main section.disfact::after{display:none!important}
+body main section.disfact .container{max-width:960px!important}
+body main section.disfact .col-lg-12>h4{font-family:'Plus Jakarta Sans',sans-serif!important;font-size:clamp(1.5rem,2.5vw,2rem)!important;font-weight:600!important;letter-spacing:-.01em!important;color:rgba(255,255,255,.45)!important;text-align:center!important;margin-bottom:56px!important;text-transform:uppercase!important;letter-spacing:.06em!important;font-size:.8rem!important}
+body main section.disfact .boxfact{text-align:center!important;padding:24px 12px!important;border-radius:0!important;background:transparent!important;border:none!important;margin-bottom:0!important}
+body main section.disfact .boxfact:hover{transform:none!important;box-shadow:none!important;background:transparent!important}
+body main section.disfact h5.factnumber{font-family:'Plus Jakarta Sans',sans-serif!important;font-size:clamp(2.8rem,5vw,4rem)!important;font-weight:700!important;letter-spacing:-.04em!important;color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;background-clip:unset!important;-webkit-background-clip:unset!important;margin-bottom:8px!important;line-height:1!important}
+body main section.disfact .boxfact p{font-family:'Plus Jakarta Sans',sans-serif!important;color:rgba(255,255,255,.35)!important;font-size:.78rem!important;font-weight:400!important;margin:0!important;letter-spacing:.02em!important;text-transform:uppercase!important}
+
+/* ── Solutions ── */
+.oursolution{padding:100px 0!important;background:#f5f5f7!important}
+.oursolution .container{max-width:1080px!important}
+.solutionvideo{align-items:center!important}
+.oursolution h4{font-family:'Plus Jakarta Sans',sans-serif!important;font-size:clamp(1.8rem,3.2vw,2.5rem)!important;font-weight:700!important;letter-spacing:-.03em!important;color:#1d1d1f!important;margin-bottom:16px!important}
+.oursolution p{font-family:'Plus Jakarta Sans',sans-serif!important;color:#6e6e73!important;font-size:.98rem!important;line-height:1.7!important;margin-bottom:28px!important}
+.oursolution .btn-primary{background:#0071e3!important;border:none!important;border-radius:980px!important;padding:14px 30px!important;font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:600!important;font-size:15px!important;box-shadow:none!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;color:#fff!important;transition:background .2s!important}
+.oursolution .btn-primary:hover{background:#0077ed!important;transform:none!important;box-shadow:none!important}
+.rc{display:flex!important;justify-content:center!important}
+.rc video,.video-circle{border-radius:16px!important;box-shadow:0 2px 8px rgba(0,0,0,.04),0 12px 48px rgba(0,0,0,.06)!important;max-width:100%!important;height:auto!important}
+
+/* ── Footer ── */
+body main footer.darkfooter{background:#111113!important;padding:0!important;overflow:hidden!important}
+body main footer.darkfooter>.container{padding-top:64px!important;padding-bottom:0!important}
+body main footer.darkfooter>.container>.row{padding-bottom:40px!important;border-bottom:1px solid rgba(255,255,255,.07)!important}
+body main footer.darkfooter h6{font-family:'Plus Jakarta Sans',sans-serif!important;font-weight:600!important;font-size:.68rem!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:rgba(255,255,255,.35)!important;margin-bottom:20px!important}
+body main footer.darkfooter ul.fotnab{list-style:none!important;padding:0!important;margin:0!important}
+body main footer.darkfooter ul.fotnab li{margin-bottom:10px!important}
+body main footer.darkfooter ul.fotnab li a{font-family:'Plus Jakarta Sans',sans-serif!important;color:rgba(255,255,255,.6)!important;font-size:.86rem!important;text-decoration:none!important;transition:color .15s!important;font-weight:400!important}
+body main footer.darkfooter ul.fotnab li a:hover{color:#fff!important}
+body main footer.darkfooter div[style*="display:flex"]{gap:16px!important;padding-top:24px!important;align-items:center!important}
+body main footer.darkfooter a img{opacity:.5!important;transition:opacity .15s!important;filter:none!important;vertical-align:middle!important}
+body main footer.darkfooter a:hover img{opacity:.85!important;filter:none!important;transform:none!important}
+body main footer.darkfooter .fotcopy,body main .fotcopy{padding:20px 0!important;margin-top:0!important}
+body main footer.darkfooter .fotcopy p,body main .fotcopy p{font-family:'Plus Jakarta Sans',sans-serif!important;color:rgba(255,255,255,.2)!important;font-size:.72rem!important;margin:0!important}
+
+/* ── Scroll Reveal ── */
+.sr{opacity:0;transform:translateY(48px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.sr.v{opacity:1!important;transform:none!important}
+.sr-up{transform:translateY(48px)}
+.sr-left{transform:translateX(-40px)}
+.sr-right{transform:translateX(40px)}
+.sr-scale{transform:scale(.92);transform-origin:center}
+.sr-d1{transition-delay:.08s}.sr-d2{transition-delay:.16s}.sr-d3{transition-delay:.24s}.sr-d4{transition-delay:.32s}.sr-d5{transition-delay:.4s}
+
+/* ── Responsive ── */
+@media(max-width:992px){
+.maincontainer{grid-template-columns:repeat(2,1fr)!important}
+body>main{padding-top:66px!important}
+.solutionvideo{gap:40px!important}
+.rc video,.video-circle{width:100%!important;height:auto!important}
+.buildfaster{padding:60px 0 48px!important}
+.oursolution{padding:60px 0!important}
+}
+@media(max-width:640px){
+.maincontainer{grid-template-columns:1fr!important;gap:16px!important}
+.bannerslider{min-height:70vh!important}
+.captionheader h1{font-size:1.65rem!important;max-width:100%!important;line-height:1.15!important}
+.aidevelopment{padding:14px 16px!important;margin-top:20px!important;border-radius:12px!important}
+.aidevelopment h3{font-size:.88rem!important}
+.aidevelopment p{font-size:.76rem!important}
+.ethicdiv{flex-direction:column!important;gap:20px!important;text-align:center!important;padding:0!important}
+.ethichead,.ethicp{width:100%!important}
+.ethichead h4{text-align:center!important;font-size:1.6rem!important}
+.ethicp p{font-size:.9rem!important;text-align:center!important}
+.context .ethicdiv{top:28vh!important}
+.area{min-height:58vh!important}
+a.btn.btn-primary.mbtn,.mbtn{padding:12px 24px!important;font-size:14px!important}
+.maincontainer .imgseccont{height:180px!important}
+.maincontainer figcaption{padding:18px 18px 20px!important}
+.solutionvideo{flex-direction:column!important}
+.homenav .nav .nav-item .nav-link{font-size:13px!important;padding:6px 10px!important}
+#mainlogo img.logo1{height:24px!important}
+#mainlogo img.logo2{height:18px!important}
+.buildfaster{padding:48px 0 36px!important}
+.videofaster{border-radius:14px!important}
+.homevideofaster{padding:24px 20px 20px!important}
+.homevideofaster h3{font-size:1.15rem!important}
+.disfact{padding:56px 0!important}
+.disfact h4{margin-bottom:32px!important}
+h5.factnumber{font-size:2rem!important}
+.oursolution{padding:48px 0 56px!important}
+.darkfooter>.container{padding-top:40px!important}
+}
+@media(max-width:400px){
+.captionheader h1{font-size:1.35rem!important}
+.bannerslider{min-height:60vh!important}
+h5.factnumber{font-size:1.8rem!important}
+.maincontainer .imgseccont{height:160px!important}
+}
+</style>
+</head>
+<style>
+	@media (max-width: 600px) {
+		.homeat h4 {
+			line-height: 26px;
+			font-size: 16px
+		}
+
+	}
+</style>
+
+<body>
+	<main>
+		<div class="headercls">
+			<div class="container">
+				<div class="row">
+					<nav class="navbar navbar-expand-lg homenav">
+						<div class="container-fluid">
+							<a href="https://diservicesinc.com"
+								class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+								<div id="mainlogo" style="display:flex;align-items: center;  gap: 10px;">
+
+									<img class="logo1" src="https://diservicesinc.com/web/images/mainlogo.svg">
+									<span style="width:1px; height:40px; background:#3482AD;"></span>
+									<img class="logo2" src="https://diservicesinc.com/web/images/micro.png">
+                                </div>
+							</a>
+
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="nav nav-pills d-flex align-items-center ">
+									<li class="nav-item"><a href="https://diservicesinc.com/we-are" class="nav-link"
+											aria-current="page">We Are</a></li>
+									<li class="nav-item"><a href="https://diservicesinc.com/our-services"
+											class="nav-link">Services</a>
+									</li>
+									<li class="nav-item"><a href="https://diservicesinc.com/data-world"
+											class="nav-link">Data World</a>
+									</li>
+									<li class="nav-item"><a href="https://diservicesinc.com/we-care" class="nav-link">We
+											Care</a></li>
+									<!-- <li class="nav-item"><a href="https://diservicesinc.com/case-study" class="nav-link">Case Study</a></li> -->
+
+									<li class="nav-item"><a href="https://diservicesinc.com/cloud-providers"
+											class="nav-link">Cloud
+											Providers</a></li>
+									<li class="nav-item"><a href="https://diservicesinc.com/contact-us"
+											class="nav-link">Contact Us</a>
+									</li>
+									<li class="nav-item"><a href="https://diservicesinc.com/privacy-policy"
+											class="nav-link">Privacy Policy</a>
+									</li>
+									<li class="nav-item"><a href="https://diservicesinc.com/join-us"
+											class="nav-link">Join Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<style>
+			.context .ethicdiv {
+				width: 100%;
+				position: relative;
+				top: 50vh;
+
+			}
+
+			.context h3 {
+				text-align: center;
+				color: #fff;
+				font-size: 50px;
+			}
+
+
+			.area {
+				/* background: #4e54c8; */
+
+
+				background: linear-gradient(89deg, #6681cc 33.58%, rgba(81, 145, 183, 0) 226.92%);
+				/* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8); */
+				width: 100%;
+				height: 70vh;
+
+
+			}
+
+			.circles {
+				position: relative;
+
+
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+
+			.circles li {
+				position: absolute;
+				display: block;
+				list-style: none;
+				width: 20px;
+				height: 20px;
+				background: rgba(255, 255, 255, 0.2);
+				animation: animate 25s linear infinite;
+				bottom: -150px;
+
+			}
+
+			.circles li:nth-child(1) {
+				left: 25%;
+				width: 80px;
+				height: 80px;
+				animation-delay: 0s;
+			}
+
+
+			.circles li:nth-child(2) {
+				left: 10%;
+				width: 20px;
+				height: 20px;
+				animation-delay: 2s;
+				animation-duration: 12s;
+			}
+
+			.circles li:nth-child(3) {
+				left: 70%;
+				width: 20px;
+				height: 20px;
+				animation-delay: 4s;
+			}
+
+			.circles li:nth-child(4) {
+				left: 40%;
+				width: 60px;
+				height: 60px;
+				animation-delay: 0s;
+				animation-duration: 18s;
+			}
+
+			.circles li:nth-child(5) {
+				left: 65%;
+				width: 20px;
+				height: 20px;
+				animation-delay: 0s;
+			}
+
+			.circles li:nth-child(6) {
+				left: 75%;
+				width: 110px;
+				height: 110px;
+				animation-delay: 3s;
+			}
+
+			.circles li:nth-child(7) {
+				left: 35%;
+				width: 150px;
+				height: 150px;
+				animation-delay: 7s;
+			}
+
+			.circles li:nth-child(8) {
+				left: 50%;
+				width: 25px;
+				height: 25px;
+				animation-delay: 15s;
+				animation-duration: 45s;
+			}
+
+			.circles li:nth-child(9) {
+				left: 20%;
+				width: 15px;
+				height: 15px;
+				animation-delay: 2s;
+				animation-duration: 35s;
+			}
+
+			.circles li:nth-child(10) {
+				left: 85%;
+				width: 150px;
+				height: 150px;
+				animation-delay: 0s;
+				animation-duration: 11s;
+			}
+
+			.buildfaster {
+				padding: 0;
+
+			}
+
+			@keyframes animate {
+
+				0% {
+					transform: translateY(0) rotate(0deg);
+					opacity: 1;
+					border-radius: 0;
+				}
+
+				100% {
+					transform: translateY(-1000px) rotate(720deg);
+					opacity: 0;
+					border-radius: 50%;
+				}
+
+			}
+
+			.ethichead {
+				width: 30%;
+			}
+
+			.ethicp {
+				width: 50%;
+
+			}
+
+			.ethichead h4 {
+
+				color: white;
+				text-align: center;
+				font-family: Play;
+				font-size: 42px;
+				font-style: normal;
+				font-weight: 700;
+
+				line-height: 44px;
+				letter-spacing: -0.72px;
+			}
+
+			.ethicp p {
+
+				color: white;
+				font-family: Play;
+				font-size: 26px;
+				font-style: normal;
+				font-weight: 400;
+				padding-right: 70px;
+				line-height: 149.4%;
+
+			}
+
+			.ethicdiv {
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				/* margin-bottom: 50px; */
+			}
+
+			.mbtn:hover {
+				background: #67b2f0;
+			}
+
+			.services__card {
+				border: 1px solid #191b1d;
+
+			}
+
+			.services__card-imgbox {
+				width: 100%;
+				height: 300px;
+				overflow: hidden;
+				/* Ensure that the image does not overflow the box */
+				position: relative;
+			}
+
+			.services__card-imgbox img {
+				width: 100%;
+				/* Make the image fill the entire width of its container */
+				height: 100%;
+				/* Ensure the image fills the entire height of its container */
+				object-fit: cover;
+				/* Maintain the aspect ratio while filling the box */
+				display: block;
+				/* Remove any default inline display */
+				position: absolute;
+				/* Position the image absolutely */
+				top: 0;
+				/* Align the image to the top */
+				left: 0;
+			}
+
+			.services__card-info {
+				padding: 40px;
+			}
+
+			.services__card-title {
+				margin-bottom: 15px;
+
+				font-style: normal;
+			}
+
+			.services__card.swiper-slide {
+				height: 100%;
+			}
+
+			.services__card-description {
+
+				color: #2e2e2e;
+				padding-bottom: 18px;
+			}
+
+			@media only screen and (max-width: 1150px) {
+				.ethichead {
+					width: auto;
+				}
+
+				.ethicp {
+					width: auto;
+
+				}
+
+				.ethicp div {
+					width: 250px;
+					margin: auto;
+
+				}
+
+				.ethicdiv {
+					flex-direction: column;
+				}
+
+				.ethicdiv p {
+					padding: 0;
+					font-size: 24px;
+					text-align: center;
+				}
+
+				.context .ethicdiv {
+					width: 100%;
+					position: relative;
+					top: 63vh;
+
+				}
+			}
+		</style>
+		<div class="bannerslider" style="margin-bottom:100px;">
+			<div class="captionheader">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<h1>Delivering business-oriented solutions fueled by <span> Microsoft AI Cloud</span></h1>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="aidevelopment">
+						<div class="row">
+							<div id="headerlower" class="col-lg-12 col-md-12 col-sm-12 col-12">
+								<h3>AI for Business Intelligence </h3>
+								<p>Microsoft Fabric Integration / Azure Platform Collaboration / Copilot Assistance </p>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-12 r-number">
+								<a href="#" class="prevbtn" style="display:none;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+										fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M7.20535 7.23047L3.87202 10.5638L3.57739 10.8584L3.87202 11.153L7.20535 14.4864L7.7946 13.8971L5.17257 11.2751H17.0833V10.4418H5.17257L7.7946 7.81972L7.20535 7.23047Z"
+											fill="white" />
+									</svg>
+								</a>
+								<a href="#" style="display:none;" class="nextbtn ">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+										fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M13.4554 7.23047L16.7887 10.5638L17.0833 10.8584L16.7887 11.153L13.4554 14.4864L12.8661 13.8971L15.4881 11.2751H3.57739V10.4418H15.4881L12.8661 7.81972L13.4554 7.23047Z"
+											fill="white" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<video width="100%" height="100%" autoplay muted loop>
+				<source src="https://diservicesinc.com/web/images/homevideo.mp4" type="video/mp4">
+			</video>
+		</div>
+
+		<section class="buildfaster">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="videofaster">
+							<video width="100%" height="611px" autoplay muted loop>
+								<source src="https://diservicesinc.com/web/images/homefaster.mp4" type="video/mp4">
+							</video>
+							<div class="homevideofaster">
+								<h3>building faster, smarter,together.</h3>
+								<div class="overvid">
+									<img src="https://diservicesinc.com/web/images/small-right image.png" class="overlayimg">
+                        </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		<section>
+			<div class="context">
+				<div class="ethicdiv">
+					<div class="ethichead">
+						<h4 class="">WE<span style="color:#8bcbff;"> BELIEVE</span></h4>
+					</div>
+					<div class="ethicp">
+						<p>Data Integrity Services stands as a premier technology and consulting partner, offering
+							comprehensive end-to-end solutions within the Microsoft ecosystem. As a dedicated team of
+							subject matter experts, including Microsoft certified professionals. We are committed to
+							delivering outstanding results for your business.
+
+						</p>
+						<div>
+
+							<a href="https://diservicesinc.com/our-services" class="btn btn-primary mbtn"
+								style="background:#8bcbff; font-size: 21px; margin-top:10px;">Make Forward</a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="area">
+					<ul class="circles">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+		</section>
+
+
+
+
+		<section class="">
+			<div class="container">
+
+				<div id="wemake" class="row  text-center">
+					<h4 class="wemake"> We Make</h4>
+					<!-- <p>Bringing innovation across all industries</p> -->
+					<p> Idea & Design suggested.</p>
+
+				</div>
+
+				<div class="maincontainer">
+					<figure>
+
+						<div class="imgseccont">
+							<a href="https://diservicesinc.com/case-study/1">
+
+								<img src="https://diservicesinc.com/web/images/casestudy_images/65b94bd409c60_cloud-mis-01.png" alt="Dis">
+                    </a>
+						</div>
+						<figcaption>
+							<a href="https://diservicesinc.com/case-study/1" class="cases">
+								<p> DIS Reduces 20% in Supply Chain inefficiencies for a Global Retail Chain with
+									Unified Data Platform and enhanced decision-making.</p>
+								Read more
+							</a>
+						</figcaption>
+
+					</figure>
+					<figure>
+
+						<div class="imgseccont">
+							<a href="https://diservicesinc.com/case-study/2">
+
+								<img src="https://diservicesinc.com/web/images/casestudy_images/65b95d223a602_cloud-mis-04.png" alt="Dis">
+                    </a>
+						</div>
+						<figcaption>
+							<a href="https://diservicesinc.com/case-study/2" class="cases">
+								<p> Upgrading from Equipment Breakdowns of a Manufacturing Plant to Significant Cost
+									Savings by AI-Driven Maintenance on Microsoft</p>
+								Read more
+							</a>
+						</figcaption>
+
+					</figure>
+					<figure>
+
+						<div class="imgseccont">
+							<a href="https://diservicesinc.com/case-study/3">
+
+								<img src="https://diservicesinc.com/web/images/casestudy_images/65b95d5c54bb0_cloud-mis-02.png" alt="Dis">
+                    </a>
+						</div>
+						<figcaption>
+							<a href="https://diservicesinc.com/case-study/3" class="cases">
+								<p> Protected Cloud Migration for a large Financial Institution Powered by Data
+									Integrity Services</p>
+								Read more
+							</a>
+						</figcaption>
+
+					</figure>
+					<figure>
+
+						<div class="imgseccont">
+							<a href="https://diservicesinc.com/case-study/4">
+
+								<img src="https://diservicesinc.com/web/images/casestudy_images/65b954ad233ae_cloud-mis-05.png" alt="Dis">
+                    </a>
+						</div>
+						<figcaption>
+							<a href="https://diservicesinc.com/case-study/4" class="cases">
+								<p> Revolutionalized Data Warehouse with the power of Azure Synapse Analytics Powered by
+									Data Integrity Services</p>
+								Read more
+							</a>
+						</figcaption>
+
+					</figure>
+					<figure>
+
+						<div class="imgseccont">
+							<a href="https://diservicesinc.com/case-study/5">
+
+								<img src="https://diservicesinc.com/web/images/casestudy_images/65b95d926050e_cloud-mis-03.png" alt="Dis">
+                    </a>
+						</div>
+						<figcaption>
+							<a href="https://diservicesinc.com/case-study/5" class="cases">
+								<p> DIS Saves a Large Financial Institution by securing their data through Cloud
+									Migration.</p>
+								Read more
+							</a>
+						</figcaption>
+
+					</figure>
+					<figure>
+
+						<div class="imgseccont">
+							<a href="https://diservicesinc.com/case-study/6">
+
+								<img src="https://diservicesinc.com/web/images/casestudy_images/65b959ace2816_cloud-mis-06.png" alt="Dis">
+                    </a>
+						</div>
+						<figcaption>
+							<a href="https://diservicesinc.com/case-study/6" class="cases">
+								<p> Reduced 30% in Onboarding Time and Paperwork of a large HR Management with Power
+									Automation and Azure AI Services.</p>
+								Read more
+							</a>
+						</figcaption>
+
+					</figure>
+				</div>
+
+			</div>
+
+		</section>
+		<section class="disfact">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h4>The DIS Facts</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-10 mx-auto ">
+						<div id="factsrenderhere" class="row justify-content-center">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+								<h5 class="factnumber">99%</h5>
+								<p>Customer Satisfaction Rate</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+								<h5 class="factnumber">200+</h5>
+								<p>Expert Team Members</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+								<h5 class="factnumber">90%</h5>
+								<p>Customers Retention Rate</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+								<h5 class="factnumber">15K</h5>
+								<p>Tickets Delivered</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+								<h5 class="factnumber">30+</h5>
+								<p>Active Customers Rate</p>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="oursolution">
+			<div class="container">
+				<div class="row solutionvideo">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+						<h4>Our Solutions</h4>
+						<p>Our philosophy is simple — hire a team of diverse, passionate people and foster a culture
+							that
+							empowers you to do you best work.</p>
+						<a href="https://diservicesinc.com/contact-us" class="btn btn-primary">Book a discovery call</a>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="rc">
+							<video src="https://diservicesinc.com/web/images/vidsolution.mp4" id="localVideoStream"
+								class="video-circle" width="700px" height="700px" autoplay muted loop></video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="disfact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>The DIS Facts</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto ">
+                <div id="factsrenderhere" class="row justify-content-center">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+                        <h5 class="factnumber">99%</h5>
+                        <p>Customer Satisfaction Rate</p>
+                    </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+                        <h5 class="factnumber">200+</h5>
+                        <p>Expert Team Members</p>
+                    </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+                        <h5 class="factnumber">90%</h5>
+                        <p>Customers Retention Rate</p>
+                    </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+                        <h5 class="factnumber">15K</h5>
+                        <p>Tickets Delivered</p>
+                    </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+                        <h5 class="factnumber">30+</h5>
+                        <p>Active Customers Rate</p>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+		<!-- <section class="membersec">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 wecenter mx-auto">
+        <h4 class="">Our Exclusive Members</h4>
+        <p>Our team of certified experts are ready to assist in planning, optimizing, managing, and innovating our client's data estate.</p>
+      </div>
+    </div>
+  </div>
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <div class="membercorsual">
+        <img src="https://diservicesinc.com/web/images/rectangle-img-1.png">
+      </div>
+      <div class="boxmember">
+        <h5>Olivia Rhye</h5>
+        <span>Founder & CEO</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="membercorsual">
+        <img src="https://diservicesinc.com/web/images/rectangle-img-2.png">
+      </div>
+      <div class="boxmember">
+        <h5>Olivia Rhye</h5>
+        <span>Founder & CEO</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="membercorsual">
+        <img src="https://diservicesinc.com/web/images/rectangle-img-3.png">
+      </div>
+      <div class="boxmember">
+        <h5>Olivia Rhye</h5>
+        <span>Founder & CEO</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="membercorsual">
+        <img src="https://diservicesinc.com/web/images/rectangle-img-4.png">
+      </div>
+      <div class="boxmember">
+        <h5>Olivia Rhye</h5>
+        <span>Founder & CEO</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="membercorsual">
+        <img src="https://diservicesinc.com/web/images/rectangle-img-5.png">
+      </div>
+      <div class="boxmember">
+        <h5>Olivia Rhye</h5>
+        <span>Founder & CEO</span>
+      </div>
+    </div>
+  </div>
+</section> -->
+		<style>
+			.latestinsights h4 {
+				color: black;
+			}
+		</style>
+		<!-- <section class="latestinsights" style="background:white;">
+    <div class="container">
+        <div class="row mb-75">
+            <div class="col-lg-6 ">
+                <h4 style="color:black;text-align:left; font-size:30px;">Latest insights</h4>
+            </div>
+            <div class="col-lg-6 mx-auto">
+                <a href="https://diservicesinc.com/data-world" class="viewall" style="color:black; font-size:20px;">View all</a>
+            </div>
+        </div>
+    </div>
+    <div class="swiper services--swiper">
+
+        <div class="services__cards  swiper-wrapper">
+
+
+
+
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c207a39e711_services-image-1.jpeg" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> Data visualization</h4>
+                    <p class="services__card-description">Processing large volumes of data in varying formats can be challenging. However, we can assist you in developing a solution that will unify all your business data into a single format. Once this is done, the data can be</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c207c278be9_services-image-2.jpg" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> Business insights and data analysis</h4>
+                    <p class="services__card-description">At our company, we not only conduct data analysis but also aid our clients in making decisions based on factual evidence rather than intuition. In reality, there is a significant disparity between business decisions made</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c207edb357c_services-image-3.png" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> DWH and ETL architecture</h4>
+                    <p class="services__card-description">To store vast quantities of unstructured data and facilitate its straightforward migration, we employ data warehousing (DWH) and implement Extract, Transform, Load (ETL) processes for each project. This technical strateg</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c20fd157762_services-image-1.jpeg" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> Custom BI solutions and components</h4>
+                    <p class="services__card-description">Although there is a plethora of off-the-shelf business intelligence products available on the market, finding one that precisely fits your business requirements can be challenging. If you find yourself in this predicament, feel free to reach out to us to commission the creation of a custom solution tailored to your needs.</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c209e4a0513_services-image-5.webp" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> Enterprise business intelligence</h4>
+                    <p class="services__card-description">We specialize in developing scalable business intelligence solutions for large corporations that can be easily upgraded and customized to meet evolving business demands and market trends as they arise.</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c209f718307_services-image-6.png" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> Implementation of BI applications</h4>
+                    <p class="services__card-description">Our proficiency extends beyond creating business intelligence solutions to efficiently integrating them into your existing systems.</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c20a1b967d6_services-image-7.png" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> BI consulting</h4>
+                    <p class="services__card-description">If you are uncertain about the technology stack for your business intelligence solution or hesitant about its functionality and design, we can provide expert guidance based on industry best practices to help you make an</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c20a349f580_services-image-8.png" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> BI support &amp; maintenance</h4>
+                    <p class="services__card-description">Maintaining existing business intelligence solutions involves regular updates and technical support. We can address technical issues and incorporate new features as needed to ensure that your BI solution stays up-to-date</p>
+                </div>
+            </div>
+            
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="https://diservicesinc.com/web/images/insight_img/65c20a4b0900c_services-image-9.webp" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> Self-service BI</h4>
+                    <p class="services__card-description">By automating certain data analysis tasks, you can avoid the expense of hiring costly business analysts.</p>
+                </div>
+            </div>
+                    </div>
+    </div>
+
+</section> -->
+		<!-- <section class="homereview">
+    <div class="homereviewbox">
+        <div class="container">
+            <div class="owl-carousel owl-review owl-theme">
+                <div class="item">
+                    <div class="reviewdesign">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                                <div class="reviewuser">
+                                    <img src="https://diservicesinc.com/web/images/review-img-1.png">
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+                                <p class="reviewpara">It's all about getting your message in front of the right audience
+                                    and creating those valuable relationships. Learn More about how DOML can help you do
+                                    just that - all with a simple, easy-to-use platform.</p>
+                                <p class="mb-1"><strong>Amaka Micheal</strong></p>
+                                <p class="small mb-0">
+                                    Media Executive, Buying & Control
+                                    <span><img src="https://diservicesinc.com/web/images/reviewuserlogo.png"> </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="reviewdesign">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                                <div class="reviewuser">
+                                    <img src="https://diservicesinc.com/web/images/review-img-2.png">
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+                                <p class="reviewpara">It's all about getting your message in front of the right audience
+                                    and creating those valuable relationships. Learn More about how DOML can help you do
+                                    just that - all with a simple, easy-to-use platform.</p>
+                                <p class="mb-1"><strong>Amaka Micheal</strong></p>
+                                <p class="small mb-0">
+                                    Media Executive, Buying & Control
+                                    <span><img src="https://diservicesinc.com/web/images/reviewuserlogo.png"> </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="reviewdesign">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                                <div class="reviewuser">
+                                    <img src="https://diservicesinc.com/web/images/review-img-3.png">
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+                                <p class="reviewpara">It's all about getting your message in front of the right audience
+                                    and creating those valuable relationships. Learn More about how DOML can help you do
+                                    just that - all with a simple, easy-to-use platform.</p>
+                                <p class="mb-1"><strong>Amaka Micheal</strong></p>
+                                <p class="small mb-0">
+                                    Media Executive, Buying & Control
+                                    <span><img src="https://diservicesinc.com/web/images/reviewuserlogo.png"> </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+		<style>
+
+		</style>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			var swiper2 = new Swiper(".services--swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    autoHeight: true,
+    pauseOnMouseEnter: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1600: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        500: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+        },
+        401: {
+            slidesPerView: 1.3,
+        },
+        340: {
+            spaceBetween: 10,
+            slidesPerView: 1.1,
+        },
+        280: {
+            slidesPerView: 1,
+        },
+    },
+});
+var swiperContainer = document.querySelector('.services--swiper');
+
+swiperContainer.addEventListener('mouseenter', function() {
+    swiper2.autoplay.stop();
+});
+
+// Resume autoplay on mouse leave
+swiperContainer.addEventListener('mouseleave', function() {
+    swiper2.autoplay.start();
+});
+		</script>
+		<footer class="darkfooter ">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-6">
+						<h6>Company</h6>
+						<ul class="fotnab">
+							<li><a href="https://diservicesinc.com/we-are">About</a></li>
+							<li><a href="https://diservicesinc.com/our-services">Services</a></li>
+							<li><a href="https://diservicesinc.com/privacy-policy">Privacy Policy</a></li>
+
+						</ul>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-6">
+						<h6>Help</h6>
+						<ul class="fotnab">
+							<li><a href="https://diservicesinc.com/contact-us">Contact Us</a></li>
+							<li><a href="https://diservicesinc.com/join-us">Join Us</a></li>
+							<!-- <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li> -->
+						</ul>
+					</div>
+					<!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <h6>Help</h6>
+        <ul class="fotnab">
+          <li><a href="#"> Customer Support</a></li>
+          <li><a href="#">Delivery Details</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div> -->
+					<!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <h6>Resources</h6>
+        <ul class="fotnab">
+          <li><a href="#"> Free eBooks</a></li>
+          <li><a href="#">Development Tutorial</a></li>
+          <li><a href="#">How to - Blog</a></li>
+          <li><a href="#">Youtube Playlist</a></li>
+        </ul>
+      </div> -->
+					<div class="col-lg-4 col-md-4 col-sm-6 col-6">
+						<h6>Other Links</h6>
+						<ul class="fotnab">
+							<li><a href="https://diservicesinc.com/data-world">Data World</a></li>
+							<li><a href="https://diservicesinc.com/we-care">We Care</a></li>
+							<li><a href="https://diservicesinc.com/cloud-providers">Cloud Provider</a></li>
+						</ul>
+					</div>
+
+					<div style="display:flex">
+
+						<a href="https://www.instagram.com/dataintegrityservices/">
+							<img style="width:30px; height:30px" src="https://diservicesinc.com/web/images/insta.png">
+                </a>
+							<a href="https://www.facebook.com/profile.php?id=61556158206869">
+								<img style="width:55px; height:30px" src="https://diservicesinc.com/web/images/fb.svg">
+                </a>
+								<a href="https://www.linkedin.com/company/data-integrity-services-us/">
+									<img style="width:38px; height:35px" src="https://diservicesinc.com/web/images/linked-in.png">
+                </a>
+					</div>
+				</div>
+				<div class="container fotcopy " style="margin-top: 10px;">
+					<div class="row ">
+						<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+							<p>© Copyright 2024, All Rights Reserved by DIS</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+							<!-- <ul class="fotsocial">
+          <li><a href=""><img src="https://diservicesinc.com/web/images/twitter-icon.svg"></a></li>
+          <li><a href=""><img src="https://diservicesinc.com/web/images/facebook-icon.svg"></a></li>
+          <li><a href=""><img src="https://diservicesinc.com/web/images/instagram-icon.svg"></a></li>
+          <li><a href=""><img src="https://diservicesinc.com/web/images/github-icon.svg"></a></li>
+        </ul> -->
+						</div>
+					</div>
+				</div>
+		</footer>
+		<!-- <script>
+$(document).ready(function() {
+    var owl = $('.owl-review');
+    owl.owlCarousel({
+        margin: 0,
+        nav: true,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+})
+</script> -->
+		<!-- <script>
+$(document).ready(function() {
+    var owl = $('.owl-sight');
+    owl.owlCarousel({
+        margin: 20,
+        nav: true,
+        loop: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+})
+</script>
+<script>
+$(document).ready(function() {
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        margin: 20,
+        nav: true,
+        items: 1,
+        loop: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+})
+</script> -->
+
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+	</script>
+<script>
+window.addEventListener('scroll',function(){
+var h=document.querySelector('.headercls');
+if(h)h.classList.toggle('scrolled',window.scrollY>20);
+},{passive:true});
+
+document.addEventListener('DOMContentLoaded',function(){
+  // Build Faster — scale in
+  var vf=document.querySelector('.videofaster');
+  if(vf){vf.classList.add('sr','sr-scale')}
+
+  // We Believe — left/right entrance
+  var eh=document.querySelector('.ethichead');
+  var ep=document.querySelector('.ethicp');
+  if(eh){eh.classList.add('sr','sr-left')}
+  if(ep){ep.classList.add('sr','sr-right','sr-d2')}
+  var epd=document.querySelector('.ethicp>div');
+  if(epd){epd.classList.add('sr','sr-d3')}
+
+  // We Make heading
+  var wmh=document.querySelector('#wemake h4');
+  var wmp=document.querySelector('#wemake p');
+  if(wmh){wmh.classList.add('sr')}
+  if(wmp){wmp.classList.add('sr','sr-d1')}
+
+  // Case study cards — stagger from bottom
+  document.querySelectorAll('.maincontainer figure').forEach(function(el,i){
+    el.classList.add('sr');
+    el.classList.add('sr-d'+(i%3+1));
+  });
+
+  // Facts heading
+  var fh=document.querySelector('.disfact h4');
+  if(fh){fh.classList.add('sr')}
+
+  // Fact numbers — each staggers
+  document.querySelectorAll('.boxfact').forEach(function(el,i){
+    el.classList.add('sr');
+    el.classList.add('sr-d'+(i%5+1));
+  });
+
+  // Solutions — left text, right video
+  var sh=document.querySelector('.oursolution h4');
+  var sp=document.querySelector('.oursolution p');
+  var sb=document.querySelector('.oursolution .btn-primary');
+  var sv=document.querySelector('.oursolution .rc');
+  if(sh){sh.classList.add('sr','sr-left')}
+  if(sp){sp.classList.add('sr','sr-left','sr-d1')}
+  if(sb){sb.classList.add('sr','sr-left','sr-d2')}
+  if(sv){sv.classList.add('sr','sr-right','sr-d2')}
+
+  // Footer columns
+  document.querySelectorAll('.darkfooter .col-lg-4,.darkfooter .col-md-4').forEach(function(el,i){
+    el.classList.add('sr');
+    el.classList.add('sr-d'+(i+1));
+  });
+
+  // Observe all
+  var o=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('v');o.unobserve(e.target)}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.sr').forEach(function(el){o.observe(el)});
+
+  // Counter animation for fact numbers
+  var co=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting||e.target.dataset.c)return;
+      e.target.dataset.c='1';
+      var raw=e.target.textContent.trim();
+      var m=raw.match(/[\d]+/);if(!m)return;
+      var target=parseInt(m[0]);
+      var suffix=raw.replace(/[\d]+/,'');
+      var start=performance.now();
+      var dur=1600;
+      (function step(now){
+        var p=Math.min((now-start)/dur,1);
+        var ease=1-Math.pow(1-p,4);
+        e.target.textContent=Math.round(target*ease)+suffix;
+        if(p<1)requestAnimationFrame(step);
+      })(start);
+    });
+  },{threshold:0.4});
+  document.querySelectorAll('.factnumber').forEach(function(el){co.observe(el)});
+});
+</script>
+</body>
+
+</html>
