@@ -948,6 +948,14 @@
 				flex-direction: column !important
 			}
 
+			.rc video,
+			.solutionvideo .video-circle {
+				width: 100% !important;
+				height: auto !important;
+				max-height: 400px !important;
+				object-fit: cover !important
+			}
+
 			.homenav .nav .nav-item .nav-link {
 				font-size: 13px !important;
 				padding: 6px 10px !important
@@ -1330,7 +1338,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-12 col-12">
 						<div class="rc">
 							<video src="https://diservicesinc.com/web/images/vidsolution.mp4" id="localVideoStream"
-								class="video-circle" width="700px" height="700px" autoplay muted loop></video>
+								class="video-circle" width="100%" autoplay muted loop playsinline></video>
 						</div>
 					</div>
 				</div>
