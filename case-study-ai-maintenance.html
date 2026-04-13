@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI-Driven Predictive Maintenance Case Study | DIS Services Inc</title>
+
+    <meta name="description" content="How DIS slashed equipment downtime by 30% at a manufacturing plant using AI-driven predictive maintenance on Microsoft Azure.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="DIS Services Inc">
+    <meta name="theme-color" content="#3482ad">
+    <link rel="canonical" href="case-study-ai-maintenance.html">
+
+    <meta property="og:title" content="AI-Driven Predictive Maintenance Case Study | DIS Services Inc">
+    <meta property="og:description" content="How DIS slashed equipment downtime by 30% at a manufacturing plant using AI-driven predictive maintenance on Microsoft Azure.">
+    <meta property="og:image" content="/web/images/casestudy_images/65b95d223a602_cloud-mis-04.png">
+    <meta property="og:url" content="case-study-ai-maintenance.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="DIS Services Inc">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI-Driven Predictive Maintenance Case Study | DIS Services Inc">
+    <meta name="twitter:description" content="How DIS slashed equipment downtime by 30% at a manufacturing plant using AI-driven predictive maintenance on Microsoft Azure.">
+    <meta name="twitter:image" content="/web/images/casestudy_images/65b95d223a602_cloud-mis-04.png">
+
+    <link rel="shortcut icon" href="web/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="web/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="web/css/stylenew.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@100;200;300;400;500;600&family=Play:wght@400;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth }
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }
+        body { background: #fff !important; overflow-x: hidden }
+
+        /* ---------- Header ---------- */
+        body main div.headercls {
+            position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important;
+            z-index: 9000 !important; background: rgba(255,255,255,.88) !important;
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+            border-bottom: none !important; box-shadow: 0 0 0 1px rgba(0,0,0,.04) !important;
+            transition: all .35s ease !important; padding: 0 !important
+        }
+        body main div.headercls.scrolled { background: rgba(255,255,255,.96) !important; box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 2px 12px rgba(0,0,0,.04) !important }
+        body > main { padding-top: 72px !important }
+        body main .headercls .navbar { padding: 8px 0 !important; min-height: 56px !important }
+        body main .headercls .navbar .container-fluid { max-width: 1200px !important; margin: 0 auto !important }
+        body main .headercls #mainlogo { gap: 8px !important }
+        body main .headercls #mainlogo img.logo1 { height: 30px !important; transition: opacity .2s !important }
+        body main .headercls #mainlogo img.logo2 { height: 24px !important; transition: opacity .2s !important }
+        body main .headercls #mainlogo span { height: 32px !important; background: rgba(52,130,173,.25) !important }
+        body main .homenav .nav { gap: 2px !important }
+        body main .homenav .nav .nav-item .nav-link {
+            font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 500 !important;
+            font-size: 13px !important; color: #424245 !important; padding: 6px 12px !important;
+            border-radius: 6px !important; transition: color .15s, background .15s !important; white-space: nowrap !important
+        }
+        body main .homenav .nav .nav-item .nav-link:hover { color: #1d1d1f !important; background: rgba(0,0,0,.04) !important }
+        body main .headercls .navbar-toggler { border: none !important; padding: 4px 8px !important; box-shadow: none !important }
+        body main .headercls .navbar-toggler:focus { box-shadow: none !important }
+
+        /* ---------- Hero banner ---------- */
+        .bannerslider.oneuspage { position: relative !important; margin-bottom: 0 !important; overflow: hidden !important; min-height: 56vh !important }
+        .bannerslider.oneuspage > img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; filter: brightness(.42) !important; z-index: 0 !important }
+        .bannerslider.oneuspage::after { content: '' !important; position: absolute !important; inset: 0 !important; background: linear-gradient(to bottom, rgba(0,0,0,.15) 0%, rgba(0,0,0,.65) 100%) !important; pointer-events: none !important; z-index: 1 !important }
+        .bannerslider .captionheader.shadownone.lefttextcap.nohome { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; z-index: 2 !important; height: 100% !important; padding: 0 !important; margin: 0 !important }
+        .bannerslider .captionheader.shadownone .container { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; height: auto !important; text-align: center !important }
+        .bannerslider .captionheader .eyebrow {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: .72rem !important; font-weight: 600 !important;
+            letter-spacing: .18em !important; text-transform: uppercase !important;
+            color: #7ec8f0 !important; margin-bottom: 18px !important;
+            display: inline-block !important;
+            padding: 6px 14px !important;
+            border: 1px solid rgba(126,200,240,.4) !important;
+            border-radius: 980px !important;
+            background: rgba(126,200,240,.08) !important;
+        }
+        .bannerslider .captionheader h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: clamp(2.2rem, 5vw, 4rem) !important;
+            font-weight: 700 !important; line-height: 1.08 !important;
+            letter-spacing: -.03em !important; color: #fff !important;
+            max-width: 920px !important; margin: 0 auto !important;
+        }
+        .bannerslider .captionheader h1 span { color: #7ec8f0 !important; -webkit-text-fill-color: #7ec8f0 !important; background: none !important; display: inline !important }
+        .bannerslider .captionheader .herolede {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 1.05rem !important; line-height: 1.6 !important;
+            color: rgba(255,255,255,.78) !important;
+            max-width: 720px !important; margin: 24px auto 0 !important;
+            font-weight: 400 !important;
+        }
+
+        /* ---------- AT A GLANCE / sections ---------- */
+        .glancepart { padding: 100px 0 80px !important; background: #fff !important }
+        .glancepart .container { max-width: 1080px !important }
+        .glancegrid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 56px !important; align-items: start !important }
+        .glanceblock h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: clamp(1.5rem, 2.6vw, 1.9rem) !important;
+            font-weight: 700 !important; letter-spacing: -.03em !important;
+            color: #1d1d1f !important; line-height: 1.25 !important; margin-bottom: 14px !important;
+        }
+        .glanceblock h2 .eyebrow {
+            display: block !important;
+            font-size: .72rem !important; font-weight: 600 !important;
+            letter-spacing: .12em !important; text-transform: uppercase !important;
+            color: #0071e3 !important; margin-bottom: 12px !important;
+        }
+        .glanceblock p { font-family: 'Plus Jakarta Sans', sans-serif !important; color: #6e6e73 !important; font-size: .98rem !important; line-height: 1.7 !important }
+        .glanceblock .label {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: .72rem !important; font-weight: 600 !important;
+            letter-spacing: .12em !important; text-transform: uppercase !important;
+            color: #0071e3 !important; display: block !important;
+            margin: 22px 0 8px !important;
+        }
+        .benefitlist { list-style: none !important; padding: 0 !important; margin: 8px 0 0 !important }
+        .benefitlist li {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            color: #1d1d1f !important; font-size: .94rem !important; line-height: 1.55 !important;
+            padding: 14px 0 14px 32px !important; position: relative !important;
+            border-bottom: 1px solid #f0f0f0 !important;
+        }
+        .benefitlist li:last-child { border-bottom: none !important }
+        .benefitlist li::before {
+            content: '' !important; position: absolute !important;
+            left: 4px !important; top: 20px !important;
+            width: 14px !important; height: 14px !important; border-radius: 50% !important;
+            background: rgba(0,113,227,.12) !important;
+        }
+        .benefitlist li::after {
+            content: '' !important; position: absolute !important;
+            left: 8px !important; top: 25px !important;
+            width: 6px !important; height: 6px !important; border-radius: 50% !important;
+            background: #0071e3 !important;
+        }
+
+        /* ---------- Long-form content blocks ---------- */
+        .blockpart { padding: 80px 0 !important; background: #f5f5f7 !important }
+        .blockpart.alt { background: #fff !important }
+        .blockpart .container { max-width: 1080px !important }
+        .blockpart .blockrow { display: grid !important; grid-template-columns: 280px 1fr !important; gap: 56px !important; align-items: start !important }
+        .blockpart h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: clamp(1.4rem, 2.4vw, 1.8rem) !important;
+            font-weight: 700 !important; letter-spacing: -.02em !important;
+            color: #1d1d1f !important; margin-bottom: 14px !important; line-height: 1.2 !important;
+        }
+        .blockpart h3 .eyebrow {
+            display: block !important;
+            font-size: .68rem !important; font-weight: 600 !important;
+            letter-spacing: .14em !important; text-transform: uppercase !important;
+            color: #0071e3 !important; margin-bottom: 14px !important;
+        }
+        .blockpart p {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            color: #6e6e73 !important; font-size: 1rem !important; line-height: 1.75 !important;
+            margin-bottom: 16px !important;
+        }
+        .blockpart ul.steplist {
+            list-style: none !important; padding: 0 !important; margin: 16px 0 0 !important;
+            display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 14px !important;
+        }
+        .blockpart ul.steplist li {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            color: #1d1d1f !important; font-size: .92rem !important; line-height: 1.55 !important;
+            padding: 18px 20px !important; background: #fff !important;
+            border: 1px solid #e8e8ed !important; border-radius: 12px !important;
+            position: relative !important;
+        }
+        .blockpart.alt ul.steplist li { background: #f5f5f7 !important; border-color: #ececf1 !important }
+
+        /* ---------- Pull quote ---------- */
+        .quotepart { padding: 100px 0 !important; background: #fff !important }
+        .quotepart .container { max-width: 880px !important; text-align: center !important }
+        .quotepart blockquote {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: clamp(1.25rem, 2.4vw, 1.7rem) !important;
+            font-weight: 500 !important; line-height: 1.45 !important;
+            letter-spacing: -.01em !important; color: #1d1d1f !important;
+            margin: 0 !important; padding: 0 !important; border: none !important;
+        }
+        .quotepart blockquote::before { content: '\201C' !important; font-size: 4rem !important; line-height: 0 !important; vertical-align: -.4em !important; color: #0071e3 !important; margin-right: 6px !important }
+        .quotepart blockquote::after { content: '\201D' !important; font-size: 4rem !important; line-height: 0 !important; vertical-align: -.4em !important; color: #0071e3 !important; margin-left: 6px !important }
+        .quotepart .qauthor {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: .82rem !important; font-weight: 600 !important;
+            letter-spacing: .12em !important; text-transform: uppercase !important;
+            color: #86868b !important; margin-top: 28px !important;
+        }
+
+        /* ---------- More case studies grid ---------- */
+        .morecases { padding: 100px 0 80px !important; background: #f5f5f7 !important }
+        .morecases .container { max-width: 1080px !important }
+        .morecases .wemake {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: clamp(1.8rem, 3.2vw, 2.5rem) !important;
+            font-weight: 700 !important; letter-spacing: -.03em !important;
+            color: #1d1d1f !important; margin-bottom: 8px !important;
+        }
+        .morecases p.lede { font-family: 'Plus Jakarta Sans', sans-serif !important; color: #86868b !important; font-size: 1rem !important; margin-bottom: 48px !important }
+        .maincontainer { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 20px !important }
+        .maincontainer figure {
+            margin: 0 !important; border-radius: 14px !important; overflow: hidden !important;
+            background: #fff !important; border: 1px solid #e8e8ed !important; box-shadow: none !important;
+            transition: border-color .25s, box-shadow .35s ease, transform .35s ease !important;
+            display: flex !important; flex-direction: column !important; cursor: pointer !important;
+        }
+        .maincontainer figure:hover { transform: translateY(-3px) !important; border-color: #d2d2d7 !important; box-shadow: 0 4px 12px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.05) !important }
+        .maincontainer .imgseccont { height: 200px !important; overflow: hidden !important }
+        .maincontainer .imgseccont img { width: 100% !important; height: 100% !important; object-fit: cover !important; transition: transform .6s cubic-bezier(.25,.1,.25,1) !important }
+        .maincontainer figure:hover .imgseccont img { transform: scale(1.03) !important }
+        .maincontainer figcaption { padding: 22px 24px 24px !important; flex: 1 !important; display: flex !important; flex-direction: column !important }
+        .maincontainer figcaption a.cases {
+            text-decoration: none !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-weight: 500 !important; color: #0071e3 !important;
+            font-size: .82rem !important; display: flex !important;
+            flex-direction: column !important; flex: 1 !important;
+        }
+        .maincontainer figcaption a.cases:hover { color: #0077ed !important }
+        .maincontainer figcaption .eyebrow {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: .68rem !important; font-weight: 600 !important;
+            letter-spacing: .12em !important; text-transform: uppercase !important;
+            color: #86868b !important; margin-bottom: 8px !important;
+        }
+        .maincontainer figcaption .cases p {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            color: #1d1d1f !important; font-size: .9rem !important; line-height: 1.5 !important;
+            margin-bottom: 14px !important; flex: 1 !important; font-weight: 500 !important;
+        }
+
+        /* ---------- Contact ---------- */
+        .contactpart { padding: 100px 0 !important; background: #fff !important }
+        .contactpart .container { max-width: 1080px !important }
+        .contactbond {
+            background: #fff !important; border-radius: 20px !important;
+            border: 1px solid #e8e8ed !important; padding: 48px !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,.04), 0 12px 48px rgba(0,0,0,.06) !important;
+        }
+        .cloudcontactheading {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: clamp(1.8rem, 3.2vw, 2.5rem) !important;
+            font-weight: 700 !important; letter-spacing: -.03em !important;
+            color: #1d1d1f !important; margin-bottom: 40px !important;
+        }
+        .cloudcontactheading span { color: #0071e3 !important }
+        .cloudcontactimg { overflow: hidden !important; border-radius: 16px !important; height: 100% !important }
+        .cloudcontactimg img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; border-radius: 16px !important }
+        .allcontactform label { font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 500 !important; font-size: .82rem !important; color: #1d1d1f !important; margin-bottom: 6px !important }
+        .allcontactform .form-control {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            border: 1px solid #e8e8ed !important; border-radius: 10px !important;
+            padding: 12px 16px !important; font-size: .9rem !important; color: #1d1d1f !important;
+            transition: border-color .2s !important; box-shadow: none !important;
+        }
+        .allcontactform .form-control:focus { border-color: #0071e3 !important; box-shadow: 0 0 0 3px rgba(0,113,227,.1) !important }
+        .allcontactform textarea.form-control { min-height: 120px !important; resize: vertical !important }
+        .allcontactform .form-group { margin-bottom: 20px !important }
+        .allcontactform .btnpart .btn-primary {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background: #0071e3 !important; border: none !important;
+            border-radius: 980px !important; font-weight: 600 !important;
+            font-size: 15px !important; color: #fff !important;
+            transition: background .2s !important; box-shadow: none !important;
+        }
+        .allcontactform .btnpart .btn-primary:hover { background: #0077ed !important }
+
+        /* ---------- Footer ---------- */
+        body main footer.darkfooter, footer.darkfooter { background: #111113 !important; padding: 0 !important; overflow: hidden !important }
+        footer.darkfooter > .container { padding-top: 64px !important; padding-bottom: 0 !important }
+        footer.darkfooter > .container > .row { padding-bottom: 40px !important; border-bottom: 1px solid rgba(255,255,255,.07) !important }
+        footer.darkfooter h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-weight: 600 !important; font-size: .68rem !important;
+            letter-spacing: .1em !important; text-transform: uppercase !important;
+            color: rgba(255,255,255,.35) !important; margin-bottom: 20px !important;
+        }
+        footer.darkfooter ul.fotnab { list-style: none !important; padding: 0 !important; margin: 0 !important }
+        footer.darkfooter ul.fotnab li { margin-bottom: 10px !important }
+        footer.darkfooter ul.fotnab li a {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            color: rgba(255,255,255,.6) !important; font-size: .86rem !important;
+            text-decoration: none !important; transition: color .15s !important; font-weight: 400 !important;
+        }
+        footer.darkfooter ul.fotnab li a:hover { color: #fff !important }
+        footer.darkfooter div[style*="display:flex"] { gap: 16px !important; padding-top: 24px !important; align-items: center !important }
+        footer.darkfooter a img { opacity: .5 !important; transition: opacity .15s !important; filter: none !important; vertical-align: middle !important }
+        footer.darkfooter a:hover img { opacity: .85 !important; filter: none !important; transform: none !important }
+        footer.darkfooter .fotcopy, .fotcopy { padding: 20px 0 !important; margin-top: 0 !important }
+        footer.darkfooter .fotcopy p, .fotcopy p { font-family: 'Plus Jakarta Sans', sans-serif !important; color: rgba(255,255,255,.2) !important; font-size: .72rem !important; margin: 0 !important }
+
+        /* ---------- Scroll reveal ---------- */
+        .sr { opacity: 0; transform: translateY(48px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1) }
+        .sr.v { opacity: 1 !important; transform: none !important }
+        .sr-up { transform: translateY(48px) }
+        .sr-left { transform: translateX(-40px) }
+        .sr-right { transform: translateX(40px) }
+        .sr-scale { transform: scale(.92); transform-origin: center }
+        .sr-d1 { transition-delay: .08s }
+        .sr-d2 { transition-delay: .16s }
+        .sr-d3 { transition-delay: .24s }
+        .sr-d4 { transition-delay: .32s }
+        .sr-d5 { transition-delay: .4s }
+
+        /* ---------- Responsive ---------- */
+        @media(max-width:992px) {
+            body > main { padding-top: 66px !important }
+            .glancegrid { grid-template-columns: 1fr !important; gap: 32px !important }
+            .blockpart .blockrow { grid-template-columns: 1fr !important; gap: 18px !important }
+            .blockpart ul.steplist { grid-template-columns: 1fr !important }
+            .maincontainer { grid-template-columns: repeat(2, 1fr) !important }
+            .glancepart { padding: 60px 0 48px !important }
+            .blockpart { padding: 48px 0 !important }
+            .quotepart { padding: 60px 0 !important }
+            .morecases { padding: 60px 0 48px !important }
+            .contactpart { padding: 60px 0 !important }
+            .contactbond { padding: 32px !important }
+        }
+        @media(max-width:640px) {
+            .bannerslider.oneuspage { min-height: 48vh !important }
+            .bannerslider .captionheader h1 { font-size: 1.7rem !important; line-height: 1.15 !important }
+            .bannerslider .captionheader .herolede { font-size: .92rem !important }
+            .maincontainer { grid-template-columns: 1fr !important; gap: 16px !important }
+            .maincontainer .imgseccont { height: 180px !important }
+            .maincontainer figcaption { padding: 18px 18px 20px !important }
+            .contactbond { padding: 24px 20px !important; border-radius: 14px !important }
+            .homenav .nav .nav-item .nav-link { font-size: 13px !important; padding: 6px 10px !important }
+            #mainlogo img.logo1 { height: 24px !important }
+            #mainlogo img.logo2 { height: 18px !important }
+            .darkfooter > .container { padding-top: 40px !important }
+        }
+        @media(max-width:400px) {
+            .bannerslider .captionheader h1 { font-size: 1.4rem !important }
+            .bannerslider.oneuspage { min-height: 42vh !important }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="headercls">
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg homenav">
+                        <div class="container-fluid">
+                            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                                <div id="mainlogo" style="display:flex;align-items: center; gap: 10px;">
+                                    <img class="logo1" src="web/images/mainlogo.svg" alt="DIS Services Inc Logo">
+                                    <span style="width:1px; height:40px; background:#3482AD;"></span>
+                                    <img class="logo2" src="web/images/micro.png" alt="Microsoft Partner">
+                                </div>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="nav nav-pills d-flex align-items-center">
+                                    <li class="nav-item"><a href="we-are.html" class="nav-link">We Are</a></li>
+                                    <li class="nav-item"><a href="our-services.html" class="nav-link">Services</a></li>
+                                    <li class="nav-item"><a href="data-world.html" class="nav-link">Data World</a></li>
+                                    <li class="nav-item"><a href="we-care.html" class="nav-link">We Care</a></li>
+                                    <li class="nav-item"><a href="cloud-providers.html" class="nav-link">Cloud Providers</a></li>
+                                    <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                                    <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+                                    <li class="nav-item"><a href="join-us.html" class="nav-link">Join Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="bannerslider oneuspage">
+            <div class="captionheader shadownone lefttextcap nohome">
+                <div class="container">
+                    <span class="eyebrow">Case Study &middot; Manufacturing</span>
+                    <h1>AI Predictive <span>Maintenance</span></h1>
+                    <p class="herolede">An AI predictive-maintenance platform on Microsoft Azure replaced costly reactive servicing with proactive insight — cutting downtime by 30% and lifting overall equipment effectiveness.</p>
+                </div>
+            </div>
+            <img width="100%" height="100%" src="web/images/joinus-img02_hq.jpg" alt="From Equipment Breakdowns to Significant Cost Savings with AI-Driven Maintenance">
+        </div>
+
+        <section class="glancepart">
+            <div class="container">
+                <div class="glancegrid">
+                    <div class="glanceblock">
+                        <h2><span class="eyebrow">At a glance</span>From Equipment Breakdowns to Significant Cost Savings with AI-Driven Maintenance</h2>
+                        <p>Reactive maintenance was eating into productivity. The plant needed a way to see failures coming, not clean up after them.</p>
+                    </div>
+                    <div class="glanceblock">
+                        <span class="label">Outcomes</span>
+                        <ul class="benefitlist">
+                            <li>30% reduction in equipment downtime through proactive maintenance.</li>
+                            <li>Substantial cost savings from optimized maintenance schedules.</li>
+                            <li>Improved overall equipment effectiveness and production efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blockpart">
+            <div class="container">
+                <div class="blockrow">
+                    <div>
+                        <h3><span class="eyebrow">The Challenge</span>What stood in the way</h3>
+                    </div>
+                    <div>
+                        <p>A struggling manufacturing plant approached DIS with an urgent request: stop the bleeding from unplanned downtime. Their existing maintenance strategy was reactive by design — wait for something to break, then race to fix it. That approach was expensive in two ways. First, the obvious one: emergency repairs cost more than scheduled ones. Second, and more damaging: every breakdown stopped a production line that the rest of the business depended on. Traditional methods couldn't see failures coming; they could only respond to them. To turn that around, the plant needed continuous, data-driven visibility into equipment health, plus the ability to act on that visibility before failures occurred.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blockpart alt">
+            <div class="container">
+                <div class="blockrow">
+                    <div>
+                        <h3><span class="eyebrow">Our Approach</span>How DIS got to work</h3>
+                    </div>
+                    <div>
+                        <p>DIS proposed an AI-driven predictive maintenance solution built on Microsoft Azure — combining advanced analytics, machine learning, and live telemetry from the plant floor.</p>
+                        <ul class="steplist">
+                            <li>Assessed existing machinery, historical maintenance data, and operational patterns in detail.</li>
+                            <li>Trained tailored AI models to predict failures from real-time data and historical trends.</li>
+                            <li>Integrated the predictive system with existing plant infrastructure for continuous monitoring.</li>
+                            <li>Trained plant personnel to act on the AI-driven maintenance insights effectively.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quotepart">
+            <div class="container">
+                <blockquote>DIS establishes a pinnacle of excellence in collaboration with Microsoft Azure, merging precision and security seamlessly. Through cutting-edge technology, DIS epitomizes reliability.</blockquote>
+                <div class="qauthor">DIS Services Inc &middot; Manufacturing</div>
+            </div>
+        </section>
+
+        <section class="blockpart">
+            <div class="container">
+                <div class="blockrow">
+                    <div>
+                        <h3><span class="eyebrow">Our Solution</span>The result we delivered</h3>
+                    </div>
+                    <div>
+                        <p>The plant moved from firefighting to forecasting. Maintenance now happens on the AI's schedule — before a breakdown, not after — and the savings show up in both the maintenance budget and the production numbers.</p>
+                        <ul class="steplist">
+                            <li>Significant drop in unplanned downtime through proactive scheduling.</li>
+                            <li>Maintenance costs reduced by focusing resources where they matter.</li>
+                            <li>Improved overall plant efficiency and equipment performance.</li>
+                            <li>Plant management now has predictive insight to drive decisions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="morecases">
+            <div class="container">
+                <div class="text-center">
+                    <h4 class="wemake">More case studies</h4>
+                    <p class="lede">Bringing innovation across all industries</p>
+                </div>
+                <div class="maincontainer">
+                    <figure>
+                        <div class="imgseccont">
+                            <a href="case-study-supply-chain.html">
+                                <img src="web/images/casestudy_images/65b94bd409c60_cloud-mis-01.png" alt="Cutting Supply Chain Inefficiencies by 20% for a Global Retail Chain">
+                            </a>
+                        </div>
+                        <figcaption>
+                            <a href="case-study-supply-chain.html" class="cases">
+                                <span class="eyebrow">Global Retail</span>
+                                <p>Cutting Supply Chain Inefficiencies by 20% for a Global Retail Chain</p>
+                                Read case study
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <div class="imgseccont">
+                            <a href="case-study-cloud-migration.html">
+                                <img src="web/images/casestudy_images/65b95d5c54bb0_cloud-mis-02.png" alt="Protected Cloud Migration for a Large Financial Institution">
+                            </a>
+                        </div>
+                        <figcaption>
+                            <a href="case-study-cloud-migration.html" class="cases">
+                                <span class="eyebrow">Financial Services</span>
+                                <p>Protected Cloud Migration for a Large Financial Institution</p>
+                                Read case study
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <div class="imgseccont">
+                            <a href="case-study-data-warehouse.html">
+                                <img src="web/images/casestudy_images/65b954ad233ae_cloud-mis-05.png" alt="Revolutionising the Data Warehouse with Azure Synapse Analytics">
+                            </a>
+                        </div>
+                        <figcaption>
+                            <a href="case-study-data-warehouse.html" class="cases">
+                                <span class="eyebrow">Enterprise Analytics</span>
+                                <p>Revolutionising the Data Warehouse with Azure Synapse Analytics</p>
+                                Read case study
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <div class="imgseccont">
+                            <a href="case-study-data-security.html">
+                                <img src="web/images/casestudy_images/65b95d926050e_cloud-mis-03.png" alt="Saving a Large Financial Institution by Securing Their Data Through the Cloud">
+                            </a>
+                        </div>
+                        <figcaption>
+                            <a href="case-study-data-security.html" class="cases">
+                                <span class="eyebrow">Financial Services</span>
+                                <p>Saving a Large Financial Institution by Securing Their Data Through the Cloud</p>
+                                Read case study
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <div class="imgseccont">
+                            <a href="case-study-hr-automation.html">
+                                <img src="web/images/wecare-img02.jpg" alt="Cutting Onboarding Time and Paperwork by 30% with Power Automate and Azure AI">
+                            </a>
+                        </div>
+                        <figcaption>
+                            <a href="case-study-hr-automation.html" class="cases">
+                                <span class="eyebrow">Human Resources</span>
+                                <p>Cutting Onboarding Time and Paperwork by 30% with Power Automate and Azure AI</p>
+                                Read case study
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactexp" class="contactpart">
+            <div class="container">
+                <div class="contactbond">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h4 class="cloudcontactheading">Talk to an <span>Expert</span></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="cloudcontactimg">
+                                <img src="web/images/cloudcontact-img.jpg" alt="Talk to a cloud expert">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <form action="contact/store" method="post">
+                                <input type="hidden" name="_token" value="" autocomplete="off">
+                                <div class="allcontactform">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label>Full Name</label>
+                                                <input type="text" name="full_name" placeholder="First Name" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" name="email" placeholder="demo@yopmail.com" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Phone Number</label>
+                                                <input type="number" name="phone_number" min="0" placeholder="Enter Phone Number" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label>Message</label>
+                                                <textarea class="form-control" name="message" placeholder="Write your message.." required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group btnpart">
+                                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="darkfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                        <h6>Company</h6>
+                        <ul class="fotnab">
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="our-services.html">Services</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                        <h6>Help</h6>
+                        <ul class="fotnab">
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                        <h6>Other Links</h6>
+                        <ul class="fotnab">
+                            <li><a href="data-world.html">Data World</a></li>
+                            <li><a href="we-care.html">We Care</a></li>
+                            <li><a href="cloud-providers.html">Cloud Provider</a></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex">
+                        <a href="https://www.instagram.com/dataintegrityservices/">
+                            <img style="width:30px; height:30px" src="web/images/insta.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61556158206869">
+                            <img style="width:55px; height:30px" src="web/images/fb.svg" alt="Facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/data-integrity-services-us/">
+                            <img style="width:38px; height:35px" src="web/images/linked-in.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                <div class="container fotcopy" style="margin-top: 10px;">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p>&copy; Copyright 2024, All Rights Reserved by DIS</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var h = document.querySelector('.headercls');
+            if (h) h.classList.toggle('scrolled', window.scrollY > 20);
+        }, { passive: true });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var bh = document.querySelector('.bannerslider .captionheader');
+            if (bh) bh.classList.add('sr');
+            document.querySelectorAll('.glanceblock').forEach(function (el, i) {
+                el.classList.add('sr', i % 2 === 0 ? 'sr-left' : 'sr-right');
+            });
+            document.querySelectorAll('.blockpart .blockrow').forEach(function (el, i) {
+                el.classList.add('sr');
+            });
+            var qp = document.querySelector('.quotepart blockquote');
+            if (qp) qp.classList.add('sr', 'sr-scale');
+            var csh = document.querySelector('.morecases .wemake');
+            if (csh) csh.classList.add('sr');
+            document.querySelectorAll('.maincontainer figure').forEach(function (el, i) {
+                el.classList.add('sr');
+                el.classList.add('sr-d' + (i % 3 + 1));
+            });
+            var cb = document.querySelector('.contactbond');
+            if (cb) cb.classList.add('sr', 'sr-scale');
+            document.querySelectorAll('.darkfooter .col-lg-4,.darkfooter .col-md-4').forEach(function (el, i) {
+                el.classList.add('sr');
+                el.classList.add('sr-d' + (i + 1));
+            });
+            var o = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('v'); o.unobserve(e.target); }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.sr').forEach(function (el) { o.observe(el); });
+        });
+    </script>
+</body>
+</html>
